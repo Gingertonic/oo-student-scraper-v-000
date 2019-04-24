@@ -29,17 +29,18 @@ class Scraper
     # binding.pry
     student_info = {}
     student.css(".social-icon-container a").each do |social|
-      if social.attribute("href").value.match(/twitter/)
-        student_info[:twitter] = social.attribute("href").value
-      elsif social.attribute("href").value.match(/linkedin/)
-        student_info[:linkedin] = social.attribute("href").value
-      elsif social.attribute("href").value.match(/github/)
-        student_info[:github] = social.attribute("href").value
-      else
-        student_info[:blog] = social.attribute("href").value
-      end
-      student_info[:profile_quote] = student.css(".profile-quote").text
-      student_info[:bio] = student.css(".description-holder p").text
+      binding.pry
+      # if social.attribute("href").value.match(/twitter/)
+      #   student_info[:twitter] = social.attribute("href").value
+      # elsif social.attribute("href").value.match(/linkedin/)
+      #   student_info[:linkedin] = social.attribute("href").value
+      # elsif social.attribute("href").value.match(/github/)
+      #   student_info[:github] = social.attribute("href").value
+      # else
+      #   student_info[:blog] = social.attribute("href").value
+      # end
+      # student_info[:profile_quote] = student.css(".profile-quote").text
+      # student_info[:bio] = student.css(".description-holder p").text
     end
     student_info
   end
